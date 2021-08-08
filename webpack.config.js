@@ -1,7 +1,10 @@
 const path = require("path");
 
+const MODE = "development";
+const enabledSourceMap = MODE === "development";
+
 module.exports = {
-  mode: "development",
+  mode: MODE,
 
   entry: {
     'main': "./src/main.tsx",
@@ -16,7 +19,25 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader"
+      },
+
+      {
+        test: /\.css/,
+        use: [
+          // linkタグに出力する機能
+          "style-loader",
+          // CSSをバンドルするための機能
+          {
+            loader: "css-loader",
+            options: {
+              // オプションでCSS内のurl()メソッドの取り込みを禁止する
+              url: false,
+              sourceMap: enabledSourceMap
+            }
+          }
+        ]
       }
+
     ]
   },
   resolve: {

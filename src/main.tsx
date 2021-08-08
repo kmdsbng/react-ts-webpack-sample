@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
         <div>
-          <h1>Hello React2!</h1>
+          <h1>Hello React4!</h1>
           <SubComponent name="My Counter for TypeScript"/>
         </div>
     );
