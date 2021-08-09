@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    body {
+      background: #eee;
+    }
+    #app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<input type="hidden"
+       id="formData"
+       value='{
+         "example": "example from json",
+         "exampleRequired": "exampleRequired from json"
+       }' />
+
+<input type="hidden"
+       id="nextPageUrl"
+       value='/complete.html'
+       />
+
+<script defer src="form2.js"></script>
+</body>
+</html>

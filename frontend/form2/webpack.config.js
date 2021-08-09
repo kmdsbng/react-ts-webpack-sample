@@ -8,11 +8,10 @@ module.exports = {
 
   entry: {
     'main': "./src/main.tsx",
-    'form1': "./src/form1.tsx",
   },
   output: {
     path: `${__dirname}/dist`,
-    filename: '[name].js',
+    filename: 'form2.js',
   },
   module: {
     rules: [
@@ -24,20 +23,16 @@ module.exports = {
       {
         test: /\.css/,
         use: [
-          // linkタグに出力する機能
           "style-loader",
-          // CSSをバンドルするための機能
           {
             loader: "css-loader",
             options: {
-              // オプションでCSS内のurl()メソッドの取り込みを禁止する
               url: false,
               sourceMap: enabledSourceMap
             }
           }
         ]
       }
-
     ]
   },
   resolve: {

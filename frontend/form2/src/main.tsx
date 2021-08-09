@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {appState, formContent} from "./form1/store/store";
-import App from "./form1/component/App";
-import {FormApiData} from "./form1/domain/FormApiData";
+import {appState, formContent} from "./store/store";
+import App from "./component/App";
+import {FormApiData} from "./domain/FormApiData";
 
 const loadFormData = () => {
     const e: HTMLInputElement | null = document.getElementById('formData') as HTMLInputElement;
@@ -38,7 +38,3 @@ const main = () => {
 };
 
 main();
-
-
-
-
