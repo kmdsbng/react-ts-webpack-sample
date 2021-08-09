@@ -9,7 +9,7 @@ const saveForm = (data: FormContentInput) => {
     saveFormContentUseCase(data);
 };
 
-export const Form1Component = () => {
+export const FormComponent = () => {
     const snapshot = useSnapshot(formContent);
     const defaultValues: FormContentInput = {
         example: snapshot.example,

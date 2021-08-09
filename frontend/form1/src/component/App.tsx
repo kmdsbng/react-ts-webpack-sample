@@ -1,9 +1,10 @@
 import React from 'react';
+
 import './App.css';
 import {useSnapshot} from "valtio";
 import {appState} from "../store/store";
 import {StoredValueConfirmComponent} from "./StoredValueConfirmComponent";
-import {Form1Component} from "./FormComponent";
+import {FormComponent} from "./FormComponent";
 
 function App() {
     const appStateSnapshot = useSnapshot(appState);
@@ -16,7 +17,7 @@ function App() {
             }
             {
                 appStateSnapshot.isDisplayForm &&
-                <Form1Component />
+                <FormComponent />
             }
 
             <StoredValueConfirmComponent />
