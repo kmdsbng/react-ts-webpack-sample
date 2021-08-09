@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Form1Component from "./Form1Component";
 import {useSnapshot} from "valtio";
 import {appState} from "../store/store";
+import {StoredValueConfirmComponent} from "./StoredValueConfirmComponent";
+import {Form1Component} from "./FormComponent";
 
 function App() {
     const appStateSnapshot = useSnapshot(appState);
@@ -15,8 +16,10 @@ function App() {
             }
             {
                 appStateSnapshot.isDisplayForm &&
-                <Form1Component/>
+                <Form1Component />
             }
+
+            <StoredValueConfirmComponent />
         </>
     );
 }

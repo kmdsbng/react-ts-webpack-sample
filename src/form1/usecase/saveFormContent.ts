@@ -1,6 +1,8 @@
-import {formContent} from "../store/store";
+import {appState, formContent} from "../store/store";
+import {FormContentInput} from "../domain/FormContentInput";
 
-export function saveFormContentUseCase() {
-    console.log(formContent);
-    alert(formContent);
+export function saveFormContentUseCase(formContentInput: FormContentInput) {
+    formContent.setFormContentInput(formContentInput);
+    // api.postFormContent(formContent.getApiData());
+    appState.moveToNextPage();
 }

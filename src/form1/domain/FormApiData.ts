@@ -1,4 +1,4 @@
-export type Form1ApiData = {
+export type FormApiData = {
     example: string,
     exampleRequired: string,
 };
