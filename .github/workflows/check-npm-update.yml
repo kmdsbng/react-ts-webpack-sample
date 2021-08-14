@@ -24,5 +24,6 @@ jobs:
         EXECUTE: "true"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         LOG_LEVEL: debug
+        WORKING_DIR: frontend/form1
       with:
         args: -u --packageFile package.json --loglevel verbose
