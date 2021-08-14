@@ -39,9 +39,12 @@ sudo docker-compose run -u$UID -e HOME=/home/app --rm --service-ports nod_dev_en
 sudo docker-compose run -u$UID -e HOME=/home/app --rm --service-ports nod_dev_env -c "npm run start"
 sudo docker-compose run -u$UID -e HOME=/home/app --rm --service-ports nod_dev_env -c "npm run build"
 sudo docker-compose run -u$UID -e HOME=/home/app --rm --service-ports nod_dev_env -c "npm run test"
+```
 
-
-
+ライブラリを最新バージョンにアップデート手順
+```
+npm i -g npm-check-updates
+ncu
 ```
 
 
