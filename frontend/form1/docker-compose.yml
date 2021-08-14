@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nod_dev_env:
+    build: .
+    container_name: react-ts-sample-node-docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/home/app
