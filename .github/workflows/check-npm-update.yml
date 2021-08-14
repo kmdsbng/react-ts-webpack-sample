@@ -9,6 +9,9 @@ on:
 jobs:
   package-update:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend/form1
     steps:
     - uses: actions/checkout@v2
     - name: set remote url
