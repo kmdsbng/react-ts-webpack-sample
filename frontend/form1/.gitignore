@@ -84,4 +84,5 @@ dist/
 .idea/
 
 .config
+.bash_history
 
