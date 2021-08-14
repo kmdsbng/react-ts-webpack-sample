@@ -2,7 +2,9 @@ name: Check NPM Update
 
 on:
   schedule:
-  - cron: 0 0 * * 3
+    - cron: 0 0 * * 3
+  push:
+    branches: [ master ]
 
 jobs:
   package-update:
